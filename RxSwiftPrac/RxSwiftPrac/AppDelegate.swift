@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let viewController = RootViewController()
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
+        runProtocolPractice()
         return true
     }
 

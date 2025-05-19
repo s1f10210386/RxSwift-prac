@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController" customModule="RxSwiftPrac" customModuleProvider="target">
             <connections>
+                <outlet property="errorLabel" destination="P1Q-Ud-4Ug" id="l87-Nz-MQQ"/>
+                <outlet property="passwordTextField" destination="TzQ-dw-8aO" id="oAf-XX-ZWr"/>
+                <outlet property="registerButton" destination="Q42-K7-bSJ" id="ClA-dd-7sj"/>
+                <outlet property="userNameTextField" destination="3gi-Ci-QGZ" id="HRA-xN-JN5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,22 +22,56 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hoge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvC-77-X5d">
-                    <rect key="frame" x="175" y="356" width="39" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gi-Ci-QGZ">
+                    <rect key="frame" x="96.666666666666686" y="217" width="200" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="2q9-U4-Ro5"/>
+                        <constraint firstAttribute="height" constant="50" id="i0b-T7-DLM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TzQ-dw-8aO">
+                    <rect key="frame" x="96.666666666666686" y="344" width="200" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="R6B-wp-7Rh"/>
+                        <constraint firstAttribute="height" constant="50" id="u3x-uq-sEo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エラーです" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-Ud-4Ug">
+                    <rect key="frame" x="156.66666666666666" y="471" width="80" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" systemColor="systemPinkColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q42-K7-bSJ">
+                    <rect key="frame" x="153" y="580" width="88" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="登録完了"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="140" y="20"/>
+            <constraints>
+                <constraint firstItem="P1Q-Ud-4Ug" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2Z5-nP-GcP"/>
+                <constraint firstItem="3gi-Ci-QGZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2gp-EX-llw"/>
+                <constraint firstItem="TzQ-dw-8aO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="X24-ca-tII"/>
+                <constraint firstItem="TzQ-dw-8aO" firstAttribute="top" secondItem="3gi-Ci-QGZ" secondAttribute="bottom" constant="77" id="g1s-s1-cXY"/>
+                <constraint firstItem="3gi-Ci-QGZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="158" id="jIl-Zd-Efv"/>
+                <constraint firstItem="P1Q-Ud-4Ug" firstAttribute="top" secondItem="TzQ-dw-8aO" secondAttribute="bottom" constant="77" id="krB-Oj-uUx"/>
+            </constraints>
+            <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
